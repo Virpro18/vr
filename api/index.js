@@ -2,6 +2,7 @@ const express = require("express");
 const app = express();
 const path = require("path");
 const bodyParser = require("body-parser");
+const db = require("./databases/db");
 
 app.use(bodyParser.json());
 app.use(express.json());
@@ -11,9 +12,22 @@ app
   .set("view engine", "html");
 
 app.get("/", (req, res) => {
+  const sql = "INSERT INT nano VALUES('2','dasdasd','latency')";
   res.render(`index`);
+  db.query(sql, (err, fields) => {
+    if (err) {
+      console.log(err);
+    } else {
+      console.log(fields);
+    }
+  });
+});
+app.post(`/app`, (req, res) => {
+  const data = req.body;
+  console.table(data);
+  res.send("complete");
 });
 
-app.listen(3020, () => console.log("Server ready on port 3000."));
+app.listen(3002, () => console.log("Server ready on port 3000."));
 
 module.exports = app;
