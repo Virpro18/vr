@@ -5,6 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+        rel="stylesheet">
     <title>Document</title>
 </head>
 <div class="background">
@@ -17,18 +21,40 @@
 
 <body>
     <header>
-        <div class="logo">
+        <section class="logo">
             <img src="" alt="">
-            <h3>Express</h3>
-        </div>
+            <h2 id="title">Express</h2>
+        </section>
     </header>
     <main>
-        <div class="login">
-            
-        </div>
-        <div class="sign-up">
-
-        </div>
+        <section class="form">
+            <div class="form-wrapper">
+                <div class="tirai"></div>
+                <div class="login">
+                    <h3>Login</h3>
+                    <form id="login">
+                        <label for="Lusername">Username or Email</label>
+                        <input type="text" name="" id="Lusername" placeholder="You're username/email" required>
+                        <label for="Lpassword">Password</label>
+                        <input type="text" name="" id="Lpassword" placeholder="You're password" required>
+                        <button id="Lbtn">Login</button>
+                    </form>
+                </div> 
+                <div class="sign-up">
+                    <h3>Sign-up</h3>
+                    <form id="signUp">
+                        <label for="Susername">Username</label>
+                        <input type="text" name="" id="Susername" placeholder="New username" required>
+                        <label for="email">email</label>
+                        <input type="email" name="" id="email" placeholder="You're email" required>
+                        <label for="Spassword">Password</label>
+                        <input type="text" name="" id="Spassword" placeholder="New password" required>
+                        <button id="Sbtn">signUp</button>
+                    </form>
+                </div>
+            </div>
+            <button id="btn">ganti</button>
+        </section>
     </main>
     <script src="javascript/api.js"></script>
 </body>
