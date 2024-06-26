@@ -8,7 +8,7 @@ const port = 3220;
 app.use(bodyParser.json());
 app.use(express.json());
 app
-  .use(express.static("api/views"))
+  .use(express.static("views"))
   .set("views", path.join(__dirname, "views"))
   .set("view engine", "html");
 
